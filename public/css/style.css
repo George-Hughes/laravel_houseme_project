@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.fieldInfo {
+    /* color: rgb(251, 174, 44);
+  font-family: Bitter, Georgia, "Times New Roman", Times, serif; */
+    color: #eee;
+    font-size: 1.2em;
+}
+
+.commentBlock {
+    background-color: #f6f7f9;
+}
+
+.card {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    border: none;
+    overflow: hidden;
+}
+
+.card:hover .imageup {
+    transform: scale(1.05);
+}
+
+.readmore,
+.categoryup,
+.commentup {
+    transition: 0.25s;
+}
+.readmore:hover,
+.categoryup:hover {
+    letter-spacing: 1.2px;
+}
+.commentup:hover {
+    transform: translateY(-4px);
+}
+.imagediv {
+    overflow: hidden;
+    max-height: 220px;
+}
+.imageup {
+    transition: 0.5s;
+}
