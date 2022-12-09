@@ -69,7 +69,7 @@ class UsersController extends Controller
         if(auth()->attempt($formFields)){
             $request->session()->regenerate();
 
-            return redirect('/')->with('message', 'You are welcome');
+            return redirect('/manage')->with('message', 'You are welcome');
         }
 
         return back()->withErrors([

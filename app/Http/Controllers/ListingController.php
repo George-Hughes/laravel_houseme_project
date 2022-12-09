@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Listing;
 use App\Models\User;
+use App\Models\Booking;
+use App\Models\Listing;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Stevebauman\Location\Location;
 
 class ListingController extends Controller
 {
     // View Index page
-    public function index()
+    public function index(Request $request)
     {
         $allCategory = Category::all();
         $listings = Listing::latest()->filter(request(['search','category']))->paginate(6);
@@ -64,9 +66,7 @@ class ListingController extends Controller
     public function edit(Listing $listing)
     {
         // Make sure logged in user is owner
-        if($listing->user_id !== auth()->id()){
-            abort(403, 'Unauthorized Action');
-        }
+         
         
         $allCategory = Category::all();
         return view('/main.edit', compact('listing','allCategory'));
@@ -101,9 +101,9 @@ class ListingController extends Controller
 
     // Manage Listings
     public function manage(){
-       return view('main.manage', [
-           'listings' => auth()->user()->listings()->get()
-       ]);
+        $bookings = Booking::all();
+        $listings = auth()->user()->listings()->get();
+       return view('main.manage', compact('listings','bookings'));
     }
     
     

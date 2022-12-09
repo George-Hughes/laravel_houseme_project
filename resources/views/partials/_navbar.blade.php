@@ -1,6 +1,6 @@
  <!-- NAV BAR -->
  <nav
- class="navbar navbar-expand-md bg-dark navbar-dark"
+ class="navbar navbar-expand-lg bg-dark navbar-dark"
  aria-label="Fifth navbar example"
  style="box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)"
 >

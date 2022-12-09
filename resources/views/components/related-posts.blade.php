@@ -17,7 +17,7 @@
         <div class="media my-1">
           <a href="/{{ $relatedListing->id }}"
             ><img
-              src="{{ $relatedListing->image ? asset('storage/' . $relatedListing->image) : asset('images/3.jpeg') }}"
+              src="{{ $relatedListing->image ? asset('storage/' . $relatedListing->image) : asset('images/default-li.jpg') }}"
               class="d-block img-fluid align-self-start float-start me-2 imageups"
               width="90"
               style="object-fit:initial; height: 75px"

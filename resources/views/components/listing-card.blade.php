@@ -3,7 +3,7 @@
 <x-card style="box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2); border: none; overflow: hidden; border-radius: 10px 50px 10px 10px;">  
     <div style="position: relative;" class="imagediv">
         <img
-        src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/3.jpeg') }}"
+        src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/default-li.jpg') }}"
         class="image img-fluid card-img-top imageup"
         />
         <a

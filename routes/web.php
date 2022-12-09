@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,11 @@ Route::delete('/{listing}', [ListingController::class, 'destroy'])->middleware('
 
 // Manage Listings
 Route::get('/manage', [ListingController::class, 'manage'])->middleware('auth');
+
+
+// ////////////////////////// Bookings //////////////////////////////
+Route::post('/bookings', [BookingController::class, 'store']);
+// ////////////////////////// Bookings //////////////////////////////
 
 
 

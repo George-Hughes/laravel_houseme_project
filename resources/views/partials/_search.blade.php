@@ -1,14 +1,18 @@
  <!-- Header Start -->
  <header
- class="header w-100"
+ class="header w-100 py-5"
  style="
    background: linear-gradient(
        to bottom left,
-       rgba(0, 0, 0, 0.5),
-       rgba(0, 0, 0, 0.7)
+       rgba(0, 0, 0, 0.4),
+       rgba(0, 0, 0, 0.6)
      ),
-     url('images/red_bowers_and_wilkins_p3_headphones-wallpaper-1400x1050.jpg');
+     url('images/search_bg.jpeg');
+     /* url('images/red_bowers_and_wilkins_p3_headphones-wallpaper-1400x1050.jpg'); */
+     background-size: cover;
+     background-position: center;
      background-attachment:fixed;
+     background-repeat: no-repeat;
  "
 >
  <div class="container py-5">
@@ -26,7 +30,7 @@
      />
      <button
        type='submit'
-       class="btn btn-outline-secondary px-4"
+       class="btn btn-dark px-4"
      >
        Search
      </button>
@@ -34,3 +38,4 @@
  </div>
 </header>
 <!-- Header End -->
+

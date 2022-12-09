@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 mx-auto mt-2 mt-sm-5">
+            <div class="col-lg-5 mx-auto mt-2 mt-sm-5 pb-5">
                 <form action="/{{ $listing->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
@@ -79,7 +79,7 @@
                         </div>
 
                         <img
-                            src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/3.jpeg') }}"
+                            src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/default-li.jpg') }}"
                             class="image img-fluid card-img-top imageup"
                             />
 
@@ -114,3 +114,4 @@
         </div>
     </div>
 @endsection
+

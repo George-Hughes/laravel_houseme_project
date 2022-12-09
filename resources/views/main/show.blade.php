@@ -27,7 +27,7 @@
                     <x-card style="border-radius: 10px 10px 10px 10px;">  
                         <div style="position: relative;" class="imagediv">
                             <img
-                            src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/3.jpeg') }}"
+                            src="{{ $listing->image ? asset('storage/' . $listing->image) : asset('images/default-li.jpg') }}"
                             class="image img-fluid card-img-top imageup"
                             />
                             <a
@@ -94,7 +94,8 @@
                 {{-- Side nave --}}
                 <div class="col-lg-3">
                   <x-sidebar-card 
-                    :relatedListings="$relatedListings"
+                    {{-- :relatedListings="$relatedListings" --}}
+                    :listing="$listing"
                     :allCategory="$allCategory"
                     :allUsers="$allUsers"
                   />

@@ -83,6 +83,61 @@
                 </tr>
             @endforelse
         </table>
+
+        {{-- For Bookings --}}
+        <h1 class="mt-5">Manage Bookings</h1>
+        <table class="table table-striped mt-4">
+            <tr class="table-dark fw-bold fs-5">
+                <td>
+                    #
+                </td>
+                <td>
+                    name
+                </td>
+                <td>
+                    Email
+                </td>
+                <td>
+                    Contact
+                </td>
+                <td>
+                    Comment
+                </td>
+                <td>
+                    House Booked
+                </td>
+            </tr>
+            @forelse ($bookings as $booking)
+            <tr>
+                <td>
+                    {{ $numberId++; }}
+                </td>
+                <td>
+                    {{ $booking->name }}
+                </td>
+                <td>
+                    {{ $booking->email }}
+                </td>
+                <td>
+                    {{ $booking->contact }}
+                </td>
+                <td>
+                    {{ $booking->comment }}
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-info" href="/{{ $booking->id }}">
+                        View House
+                    </a>
+                </td>
+            </tr>
+            @empty
+                <tr>
+                    <td colspan="4">
+                        <p>No posts found</p>
+                    </td>
+                </tr>
+            @endforelse
+        </table>
     </div>
 
     {{-- Footer --}}
